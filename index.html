@@ -12,7 +12,8 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
-        background-color: #f4f4f4;
+        background-color: #050a30;
+        color: #f4f4f4;
       }
       #forca {
         font-size: 2rem;
@@ -31,6 +32,11 @@
         background-color: #eee;
         border: 1px solid #999;
         border-radius: 5px;
+      }
+      #imagem {
+        background-color: rgba(0, 166, 255, 0.705);
+        padding: 30px;
+        border-radius: 20px;
       }
       #mensagem {
         font-size: 1.2rem;
@@ -53,17 +59,40 @@
       #res {
         margin: auto;
       }
+      footer {
+        background-color: #23075c;
+        width: 100%;
+        text-align: center;
+        bottom: 0;
+        margin-top: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: #f4f4f4;
+        border: 1px solid #f4f4f4;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(75, 2, 117);
+      }
+      a:hover {
+        opacity: 0.8;
+      }
+
       @media screen and (max-width: 568px) {
         #letras {
           display: grid;
           grid-template-columns: repeat(5, 1fr);
+        }
+        footer {
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
         }
       }
     </style>
   </head>
   <body>
     <h1>Jogo da Forca</h1>
-    <div>
+    <div id="imagem">
       <img src="forca.png" alt="" width="110px" />
     </div>
     <h5 id="tenta"></h5>
@@ -75,6 +104,12 @@
       <p id="mensagem"></p>
       <button id="again" onclick="restart_forca()">Jogar novamente</button>
     </div>
+    <footer>
+      <p>&copy;Made by: Eliseu Samulolo</p>
+      <p id="link">
+        <a href="https://github.com/EliseuFranco" target="_blank">GitHub</a>
+      </p>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>
