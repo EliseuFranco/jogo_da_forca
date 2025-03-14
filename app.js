@@ -61,6 +61,7 @@ const palavras = [
   "SARCASTICO",
   "COGUMELO",
   "PETISCO",
+  "OXIGENIO",
 ];
 const secreta = palavras[Math.floor(Math.random() * palavras.length)].split("");
 const mascara = secreta.map(() => "_");
