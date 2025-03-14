@@ -20,6 +20,8 @@
       }
       #letras {
         margin-bottom: 20px;
+        background-color: aqua;
+        padding: 10px;
       }
       .letter {
         display: inline-block;
@@ -35,6 +37,7 @@
         font-size: 1.2rem;
         font-weight: bold;
         margin-top: 10px;
+        text-align: center;
       }
       #again {
         display: none;
@@ -48,6 +51,9 @@
         cursor: pointer;
         color: #f4f4f4;
       }
+      #res {
+        margin: auto;
+      }
     </style>
   </head>
   <body>
@@ -58,7 +64,7 @@
     <h5 id="tenta"></h5>
     <div id="forca">_ _ _ _ _</div>
     <div id="letras"></div>
-    <div>
+    <div id="res">
       <p id="mensagem"></p>
       <button id="again" onclick="restart_forca()">Jogar novamente</button>
     </div>
