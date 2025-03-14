@@ -47,10 +47,24 @@ const palavras = [
   "MODERNIDADE",
   "AFOBADO",
   "REPORTAGEM",
+  "CONSELHEIRO",
+  "DESAJEITADO",
+  "UMBIGO",
+  "CATINGA",
+  "XICARA",
+  "ZINCO",
+  "IMPACTO",
+  "GAMBA",
+  "HELICOPTERO",
+  "PEAO",
+  "SAPATO",
+  "SARCASTICO",
+  "COGUMELO",
+  "PETISCO",
 ];
 const secreta = palavras[Math.floor(Math.random() * palavras.length)].split("");
 const mascara = secreta.map(() => "_");
-let tentativas = 10;
+let tentativas = 6;
 
 const divForca = document.getElementById("forca");
 const tentaDiv = document.getElementById("tenta");

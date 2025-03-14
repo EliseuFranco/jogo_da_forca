@@ -15,6 +15,15 @@
         background-color: #050a30;
         color: #f4f4f4;
       }
+
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        padding: 50px;
+      }
       #forca {
         font-size: 2rem;
         margin-bottom: 20px;
@@ -83,6 +92,9 @@
           display: grid;
           grid-template-columns: repeat(5, 1fr);
         }
+        section {
+          margin-top: 150px;
+        }
         footer {
           border-top-left-radius: 10px;
           border-top-right-radius: 10px;
@@ -91,19 +103,22 @@
     </style>
   </head>
   <body>
-    <h1>Jogo da Forca</h1>
-    <div id="imagem">
-      <img src="forca.png" alt="" width="110px" />
-    </div>
-    <h5 id="tenta"></h5>
-    <div id="forca">_ _ _ _ _</div>
-    <div id="botoes">
-      <div id="letras"></div>
-    </div>
-    <div id="res">
-      <p id="mensagem"></p>
-      <button id="again" onclick="restart_forca()">Jogar novamente</button>
-    </div>
+    <section>
+      <h1>Jogo da Forca</h1>
+      <div id="imagem">
+        <img src="forca.png" alt="" width="110px" />
+      </div>
+      <h5 id="tenta"></h5>
+      <div id="forca">_ _ _ _ _</div>
+      <div id="botoes">
+        <div id="letras"></div>
+      </div>
+      <div id="res">
+        <p id="mensagem"></p>
+        <button id="again" onclick="restart_forca()">Jogar novamente</button>
+      </div>
+    </section>
+
     <footer>
       <p>&copy;Made by: Eliseu Samulolo</p>
       <p id="link">
