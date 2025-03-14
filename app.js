@@ -21,6 +21,15 @@ const palavras = [
   "MICROSCOPIO",
   "ENFERMEIRA",
   "LAMPADA",
+  "PARALELEPIPEDO",
+  "IGUANA",
+  "RINOUSSERONTE",
+  "CHAMA",
+  "AMBIENTE",
+  "FLOR",
+  "AFIADOR",
+  "MARMELO",
+  "MARMELADA",
 ];
 const secreta = palavras[Math.floor(Math.random() * palavras.length)].split("");
 const mascara = secreta.map(() => "_");
