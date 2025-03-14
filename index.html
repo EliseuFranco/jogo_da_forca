@@ -20,7 +20,7 @@
       }
       #letras {
         margin-bottom: 20px;
-        padding: 10px;
+        margin: auto;
       }
       .letter {
         display: inline-block;
@@ -53,6 +53,12 @@
       #res {
         margin: auto;
       }
+      @media screen and (max-width: 568px) {
+        #letras {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+        }
+      }
     </style>
   </head>
   <body>
@@ -62,7 +68,9 @@
     </div>
     <h5 id="tenta"></h5>
     <div id="forca">_ _ _ _ _</div>
-    <div id="letras"></div>
+    <div id="botoes">
+      <div id="letras"></div>
+    </div>
     <div id="res">
       <p id="mensagem"></p>
       <button id="again" onclick="restart_forca()">Jogar novamente</button>

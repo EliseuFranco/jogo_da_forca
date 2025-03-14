@@ -74,6 +74,7 @@ function atualizarJogo() {
 function forca() {
   alfabeto.forEach((letra) => {
     const botao = document.createElement("button");
+    botao.setAttribute("class", "letra");
     botao.innerText = letra;
     botao.classList.add("letter");
 
