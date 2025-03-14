@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Forca</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+      #forca {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      #letras {
+        margin-bottom: 20px;
+      }
+      .letter {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background-color: #eee;
+        border: 1px solid #999;
+        border-radius: 5px;
+      }
+      #mensagem {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      #again {
+        display: none;
+        margin: auto;
+        padding: 10px;
+        background-color: rgba(20, 118, 179, 0.669);
+        font-size: 28px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        color: #f4f4f4;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Jogo da Forca</h1>
+    <div>
+      <img src="forca.png" alt="" width="110px" />
+    </div>
+    <h5 id="tenta"></h5>
+    <div id="forca">_ _ _ _ _</div>
+    <div id="letras"></div>
+    <div>
+      <p id="mensagem"></p>
+      <button id="again" onclick="restart_forca()">Jogar novamente</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
