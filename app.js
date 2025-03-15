@@ -1,6 +1,7 @@
 const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const letrasDiv = document.getElementById("letras");
 const mensagem = document.getElementById("mensagem");
+let dicah5 = document.querySelector("#show_dica");
 const palavras = [
   "AMIGO",
   "COMPANHEIRO",
@@ -66,10 +67,32 @@ const palavras = [
 const secreta = palavras[Math.floor(Math.random() * palavras.length)].split("");
 const mascara = secreta.map(() => "_");
 let tentativas = 6;
+let dica = 2;
+const btn_dica = document.getElementById("dica");
 
 const divForca = document.getElementById("forca");
 const tentaDiv = document.getElementById("tenta");
 const btn_again = document.getElementById("again");
+dicah5.innerText = `Dicas restantes: ${dica}`;
+
+function dicas() {
+  let letra = secreta[Math.floor(Math.random() * secreta.length)];
+  let random_dicas = [];
+
+  if (dica > random_dicas.length) {
+    mascara.forEach((letter) => {
+      if (letra == letter) {
+        letra = secreta[Math.floor(Math.random() * secreta.length)];
+      }
+    });
+    alert(`A palavra secreta contém a letra ${letra}`);
+    random_dicas.push(letra);
+    dica -= 1;
+  } else {
+    alert("Atingiu o máximo de dicas");
+  }
+  dicah5.innerText = `Dicas restantes: ${dica}`;
+}
 
 function restart_forca() {
   window.location.reload();
@@ -120,7 +143,6 @@ function forca() {
 
     letrasDiv.appendChild(botao);
   });
-
   atualizarJogo();
 }
 

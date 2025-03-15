@@ -23,8 +23,8 @@
         flex-direction: column;
       }
       #forca {
-        font-size: 2rem;
-        margin-bottom: 20px;
+        font-size: 1.5rem;
+        margin: 20px;
       }
       #letras {
         margin-bottom: 20px;
@@ -87,6 +87,17 @@
       a:hover {
         opacity: 0.8;
       }
+      #dica {
+        cursor: pointer;
+        padding: 10px;
+        background-color: rgb(27, 195, 100);
+        border: none;
+        margin: 5px;
+        border-radius: 5px;
+      }
+      #dica:hover {
+        opacity: 0.9;
+      }
 
       @media screen and (max-width: 568px) {
         #letras {
@@ -115,6 +126,8 @@
       </div>
       <h1>Jogo da Forca</h1>
       <h5 id="tenta"></h5>
+      <h5 id="show_dica"></h5>
+      <button id="dica" onclick="dicas()">Dica</button>
       <div id="forca">_ _ _ _ _</div>
       <div id="botoes">
         <div id="letras"></div>
