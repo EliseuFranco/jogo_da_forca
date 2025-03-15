@@ -76,21 +76,17 @@ const btn_again = document.getElementById("again");
 dicah5.innerText = `Dicas restantes: ${dica}`;
 
 function dicas() {
-  let letra = secreta[Math.floor(Math.random() * secreta.length)];
-  let random_dicas = [];
-
-  if (dica > random_dicas.length) {
-    mascara.forEach((letter) => {
-      if (letra == letter) {
-        letra = secreta[Math.floor(Math.random() * secreta.length)];
-      }
-    });
-    alert(`A palavra secreta contém a letra ${letra}`);
-    random_dicas.push(letra);
-    dica -= 1;
-  } else {
-    alert("Atingiu o máximo de dicas");
+  if (dica <= 0) {
+    alert("Você já usou todas as dicas");
+    return;
   }
+  let letra;
+
+  do {
+    letra = secreta[Math.floor(Math.random() * secreta.length)];
+  } while (mascara.includes(letra));
+  alert(`A palavra secreta contém a letra ${letra}`);
+  dica -= 1;
   dicah5.innerText = `Dicas restantes: ${dica}`;
 }
 

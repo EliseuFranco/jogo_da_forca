@@ -112,9 +112,13 @@
           border-top-right-radius: 10px;
         }
       }
-      @media screen and (min-width: 820px) {
+      @media screen and (min-width: 569px) and (max-width: 820px) {
         #letras {
           width: 90%;
+        }
+        #letras {
+          display: grid;
+          grid-template-columns: repeat(9, 1fr);
         }
       }
     </style>
