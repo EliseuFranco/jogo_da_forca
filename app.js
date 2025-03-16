@@ -78,6 +78,7 @@ dicah5.innerText = `Dicas restantes: ${dica}`;
 function dicas() {
   if (dica <= 0) {
     alert("Você já usou todas as dicas");
+    btn_dica.disabled = true;
     return;
   }
   let letra;
@@ -88,6 +89,10 @@ function dicas() {
   alert(`A palavra secreta contém a letra ${letra}`);
   dica -= 1;
   dicah5.innerText = `Dicas restantes: ${dica}`;
+}
+
+function desable_dica() {
+  btn_dica.disabled = true;
 }
 
 function restart_forca() {
@@ -115,10 +120,12 @@ function atualizarJogo() {
     mensagem.innerText = "🎉 Você venceu, acertou a palavra secreta! 👏";
     letrasDiv.style.display = "none";
     btn_again.style.display = "block";
+    desable_dica();
   } else if (tentativas === 0) {
     mensagem.innerText = `😔 Você perdeu! A palavra era "${secreta.join("")}".`;
     letrasDiv.style.display = "none";
     btn_again.style.display = "block";
+    desable_dica();
   }
 }
 
