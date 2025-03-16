@@ -15,7 +15,7 @@ const palavras = [
   "OTORRINOLARINGOLOGISTA",
   "OCULOS",
   "ARMADURA",
-  "LEOPRADO",
+  "LEOPARDO",
   "HIENA",
   "CARRO",
   "HABITACAO",
